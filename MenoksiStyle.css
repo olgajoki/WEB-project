@@ -1,4 +1,36 @@
-﻿body
-{
-    color:red;
+﻿#flex-container {
+
+    display: flex;
+    flex-wrap: wrap; 
+    color: RGB(0,0,0);
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    background: rgb(228 168 168);
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+
+    width: 100%;
+}
+
+aside {
+    width: 100%;
+    background: rgb(222, 214, 214);
+    color: rgb(0,0,0);
+}
+
+@media only screen and (min-width: 768px) {
+    /*aside siirtyy isolla ruudulla oikealle puolelle*/
+    aside {
+        width: 20%;
+    }
+
+    main {
+        width: 80%;
+    }
 }
