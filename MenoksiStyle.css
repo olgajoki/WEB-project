@@ -2,3 +2,21 @@
 {
     color:red;
 }
+@media only screen and (min-width: 600px) {
+    header {
+        width: 100%;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    aside {
+        width: 20%;
+    }
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
