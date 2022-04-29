@@ -8,7 +8,7 @@
 */
 
 // hakuosoitteen vakio-osa.
-const apiurl = "http://api.hel.fi/linkedevents/v1/event/?start=";
+const apiurl = "http://api.hel.fi/linkedevents/v1/event/?division=";
 
 // lopullinen hakukysely, joka lähetetään nettiin.
 let apiKysely;
@@ -18,7 +18,7 @@ const hakunappi = document.getElementById("hakunappi");
 // TODO: etsi hakukenttä eli syöttökenttä johon käyttäjä kirjoittaa hakusanan.
 const hakuteksti = document.getElementById('hakuteksti');
 // TODO: etsi html-sivulta main-tagi eli minkä sisään hakutulokset laitetaan.
-const tulokset = document.querySelector('main');
+const tulokset = document.querySelector('#APIhaku');
 
 
 // lisätään napille tapahtumankäsittelijä
@@ -28,6 +28,7 @@ hakunappi.addEventListener('click', teeKysely);
 // Lopuksi funktio kutsuu teeHaku() funktiota.
 function teeKysely() {
 
+    document.querySelector('#APIhaku').innerHTML = '';
 
     // TODO: haetaan html-sivulta käyttäjän antama hakuteksti (muista .value)
     const value = hakuteksti.value; 
@@ -62,73 +63,33 @@ function teeHaku(apiKysely)  {
 // Funktio hoitaa kyselystä saadun json-datan käsittelyn.
 // Funktio saa parametrina json-muodossa olevan datan.
 function naytaVastaus(jsonData) {
-    // AJAX-tehtävän vaihe 1 on suoritettu, jos alla oleva koodi
-    // tulostaa konsoliin noin 10 sarjan tiedot (Array, jonka koko on 10).
-    // Muuta kuitenkin koodia että hakee käyttäjän antamalla hakusanalla.
-    console.log("json sellaisenaan");
-    console.log(jsonData);
-    console.log("Sellainen se json oli.");
 
-    /*
-        Aha, json-dataoliot ovat siis taulukossa.
-        Yksi dataolio sisältää yhden sarjan tiedot.
-        Ope ei osaa käsitellä kuin eka sarjan tietoja.
-        Mistä mikin data löytyy: katso TV-Mazen API-kuvauksesta.
-    */
-
-
-    // Tulostetaan konsoliin muutama tieto eka sarjasta jsonData[0].
-    console.log("Eka sarjan nimi: " + jsonData[0].name);
-
-    // TODO: kerää tarvittava data ja tulosta se web-sivulle.
-    // Valmistellaan html-sivulle tuleva koodi.
-
-    //vaihe 2
-
-
-        let htmlKoodi =
-            `
-<br>Eka sarjan nimi:  + ${jsonData[0]}
-        
-        `;
-
-        
-    tulokset.innerHTML += htmlKoodi;
-
-/*
     
-        //vaihe 3
-        for (let i = 0; i < jsonData.length; i++) {
+    let list_nimet = [];
 
+    for (let i = 0; i < jsonData.data.length; i++) {
 
-        
+        //lista, jolla huolehditaan, että sivustolle ei tule samaa tapahtumaa useamman kerran
 
+        if (list_nimet.includes(jsonData.data[i].name.fi)) {
+            console.log('on jo sivulla.')
+        }
+        // jos tapahtuman nimeä ei vielä löydy sivustolta, lisätään tapahtuman tiedot sivustolle
+        else {
             let htmlKoodi =
                 `
-        <h2>Hakemasi sarjan nimi:</h2> <b>${jsonData[i].show.name}</b> <br>
+<br>
+        <h3> Tapahtuman nimi:</h3> ${jsonData.data[i].name.fi}
 
-        Sarjan genret: <i>${jsonData[i].show.genres.join(", ")}</i>
-        <br>
-        
-        <a href="${jsonData[i].show.officialSite}" target="_blank" rel="noopener noreferrer">Sarjan kotisivu</a>
-        <br>
-        <figure>
-            <img src="${jsonData[i].show.image.medium}">
-        </figure>
-         <br>
-            <h3>Summary:</h3> ${jsonData[i].show.summary}
+        <h4>Tapahtuman kuvaus:</h4> ${jsonData.data[i].description.fi}
 
         `;
-            let kuvanOsoite;
-            if (jsonData[i].show.image == null || jsonData[i].show.image.medium == null) {
-                kuvanOsoite = "img/not-found.jpg";
 
-            }
-            else {
-                kuvanOsoite = jsonData[i].show.image.medium;
-            }
 
             tulokset.innerHTML += htmlKoodi;
-        }*/
-    
+            //lisätään tapahtuman nimi taulukkoon 
+            list_nimet.push(jsonData.data[i].name.fi);
+        }
+    }
+
 }
