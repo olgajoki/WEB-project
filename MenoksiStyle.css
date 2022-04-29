@@ -18,10 +18,20 @@ main {
     width: 100%;
 }
 
+
+/*Kasvaa haun myötä koko sivun mittaiseksi*/
 aside {
     width: 100%;
     background: rgb(222, 214, 214);
     color: rgb(0,0,0);
+}
+
+#API{
+    width: 80%;
+}
+
+h3{
+    background-color: goldenrod;
 }
 
 @media only screen and (min-width: 768px) {
@@ -31,6 +41,6 @@ aside {
     }
 
     main {
-        width: 80%;
+        width: 100%;
     }
 }
