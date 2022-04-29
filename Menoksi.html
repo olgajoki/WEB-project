@@ -10,61 +10,77 @@
 
 
 </head>
-<body>
+<body id="flex-container">
     <header>
         <h1>MENOKSI</h1>
     </header>
-    <div id="flex-container">
-
-
 
         <main>
+            <section>
+                <p>VIDEO TÄHÄN</p>
 
-            <p>VIDEO TÄHÄN</p>
 
 
+                <h2>VÄLIOTSIKKO</h2>
+                <p>
+                    houkutteluteksti, videosta kertomista yms...
+                </p>
+            </section>
+            <section>
+                <p>kuvat 1,2,3</p>
+                <figure>
+                    <figcaption>
+                    </figcaption>
+                </figure>
+                <br>
+                <figure>
+                    <figcaption>
+                    </figcaption>
+                </figure>
+                <br>
+                <figure>
+                    <figcaption>
+                    </figcaption>
+                </figure>
+                <br>
+            </section>
+            <section>
+                <h2>VÄLIOTSIKKO</h2>
+                <p>JOTAIN TEKSTIÄ JA KARTAN ESITTELY</p>
 
-            <h2>VÄLIOTSIKKO</h2>
-            <p>
-                houkutteluteksti, videosta kertomista yms...
-            </p>
-            <p>kuvat 1,2,3</p>
-            <figure>
-                <figcaption>
-                </figcaption>
-            </figure>
-            <br>
-            <figure>
-                <figcaption>
-                </figcaption>
-            </figure>
-            <br>
-            <figure>
-                <figcaption>
-                </figcaption>
-            </figure>
-            <br>
-            <h2>VÄLIOTSIKKO</h2>
-            <p>JOTAIN TEKSTIÄ JA KARTAN ESITTELY</p>
+                <p>kartta</p>
 
-            <p>kartta</p>
+                <p>yhteiskuva</p>
+                <figure>
+                    <figcaption>
+                    </figcaption>
+                </figure>
+            </section>
 
-            <p>yhteiskuva</p>
-            <figure>
-                <figcaption>
-                </figcaption>
-            </figure>
 
-                
         </main>
-       
+        <section id="API">
+            <h2>MITÄ, MISSÄ, MILLOIN?</h2>
+
+            <p>Jos kaipaat hieman rauhallisempaa tekemistä, kirjoita hakukenttään Helsingin lähialue, niin saat Menoksi-ehdotuksia!</p>
+            <input id="hakuteksti" type="text">
+
+            <button id="hakunappi">Hae</button>
+
+            <div id="APIhaku">
+
+            </div>
+            <br />
+        </section>
+
         <!-- aside siirtyy isolla ruudulla oikealle puolelle -->
         <aside>
             <p>LINKIT VIDEON TAUSTATYÖHÖN JA PROJEKTIN SUUNNITTELUUN</p>
 
         </aside>
 
-    </div>
     <script src="menoksi.js"></script>
+    <script src="menoksiajax.js"></script>
+
 </body>
 </html>
