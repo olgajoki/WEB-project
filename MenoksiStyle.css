@@ -11,6 +11,7 @@ header {
     text-align: center;
     background: rgb(228 168 168);
     font-family: 'Roboto', sans-serif;
+    height: 50%;
 }
 
 main {
@@ -19,28 +20,39 @@ main {
 }
 
 
-/*Kasvaa haun myötä koko sivun mittaiseksi*/
 aside {
     width: 100%;
     background: rgb(222, 214, 214);
     color: rgb(0,0,0);
+    text-align: center;
+
 }
 
 #API{
     width: 80%;
 }
 
-h3{
-    background-color: goldenrod;
-}
 
 @media only screen and (min-width: 768px) {
     /*aside siirtyy isolla ruudulla oikealle puolelle*/
     aside {
         width: 20%;
+        height: 50%;
     }
 
     main {
-        width: 100%;
+        width: 80%;
     }
+}
+/* lisätty fontti*/
+h1, h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+body {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+a {
+    color: rgb(228 168 168);
 }
