@@ -30,6 +30,9 @@ function teeKysely() {
 
   document.querySelector('#APIhaku').innerHTML = '';
 
+  // hakutulokset tulostetaan erilliseen scrollbar osuuteen. Vaihdetaan scrollbar näkyväksi, kun haku on suoritettu.
+  tulokset.style.visibility = "visible";
+
   let value = hakuteksti.value;
 
   let hakusana = value;
@@ -200,6 +203,9 @@ function naytaVastausweather(proxynData) {
 
 
 }
+
+
+
 
 
 
