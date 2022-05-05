@@ -4,6 +4,7 @@
     flex-wrap: wrap; 
     color: RGB(0,0,0);
     font-family: 'Roboto', sans-serif;
+    line-height: 150%;
 }
 
 header {
@@ -41,6 +42,8 @@ aside {
     FLOAT: left;
     padding: 1%;
     overflow:scroll;
+    font-family: 'Roboto', sans-serif;
+    line-height: 150%;
 
 }
 
