@@ -7,11 +7,21 @@
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../MenoksiStyle.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/MenoksiStyle.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/kartta.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="../kuvat/pullo.png" type="image/png" sizes="20x20">
+
+    <!-- Load Leaflet from CDN -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossOrigin=""
+    />
 
 </head>
 <body id="flex-container">
@@ -30,7 +40,9 @@
     <br>
     <h2>MITÄ, MISSÄ, MILLOIN</h2>
 
-    <p>Jos kaipaat hieman rauhallisempaa tekemistä, kirjoita hakukenttään Helsingin lähialue, niin saat Menoksi-ehdotuksia!</p>
+    <p>Jos kaipaat hieman rauhallisempaa tekemistä, kirjoita hakukenttään Helsingin lähialue, niin saat Menoksi-ehdotuksia!<br>
+    Hyödynnä karttaa etsimällä reitti paikasta A paikkaan B.
+    </p>
     <input id="hakuteksti" type="text">
 
     <button id="hakunappi">Hae</button>
@@ -43,24 +55,36 @@
 
 <section id="mapPosition">
     <div id="map"></div>
-
-
 </section>
+
 </main>
 <!-- aside siirtyy isolla ruudulla oikealle puolelle. Jos asiden pitää mainin ulkopuolella ja ennen API-sectionia, aside-boksi ei kasva API:n haun myötä. -->
 <aside>
     <h3>Säätilanne paikkakunnan mukaan</h3>
 
     <input id="hakutekstiWeather" type="text">
-
     <button id="hakunappiWeather">Hae</button>
-
-    <div id="APIhakuWeather">
-
-    </div>
+    <div id="APIhakuWeather"></div>
 </aside>
 
+
+<script
+        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossOrigin=""
+></script>
+
+<!-- Load Esri Leaflet from CDN -->
+<script src="https://unpkg.com/esri-leaflet@3.0.4/dist/esri-leaflet.js"></script>
+<script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
+
+
+<!-- Load ArcGIS REST JS from CDN -->
+<script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
+<script src="https://unpkg.com/@esri/arcgis-rest-routing@4.0.0/dist/bundled/routing.umd.js"></script>
+
 <script src="../JS/APIt.js"></script>
+
 
 
 </body>

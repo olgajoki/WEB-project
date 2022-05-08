@@ -1,0 +1,26 @@
+
+
+#map {
+    position: absolute; /*pienessä ruudussa jää asiden päälle*/
+    top: 750px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #323232;
+    width: 50%;
+    height: 50%;
+}
+
+#directions {
+    position: absolute;
+    top: 750px;
+    z-index: 1000;
+    width: 30%;
+    max-height: 50%;
+    right: 20px;
+    overflow-y: auto; /* Show a scrollbar if needed*/
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 10px;
+    font-style: italic;
+}
