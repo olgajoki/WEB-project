@@ -194,11 +194,10 @@ function teeHakuWeather(apiKyselyWeather)  {
 
 //Tulostetaan json konsoliin
 function naytaVastausWeather(proxynDataWeather) {
-    console.log('Hakusanassa ei ole vikaa, mutta koodissa \n const jsonDataWeather = JSON.parse(proxynDataWeather.contents);\n vaikuttaisi olevan. :(')
-    const jsonDataWeather = JSON.parse(proxynDataWeather.contents);
+    const jsonData = JSON.parse(proxynDataWeather.contents);
 
     console.log("json muotoinen data sellaisenaan");
-    console.log(jsonDataWeather);
+    console.log(jsonData);
     console.log("Sellainen se json oli.");
 
 //Lisätään tämän hetkinen, huomisen ja ylihuomisen säätiedot html:ään
@@ -207,12 +206,6 @@ function naytaVastausWeather(proxynDataWeather) {
 <br>
         <h3> Paikka:</h3> ${jsonData.region}
 
-        <h4>Sää tällä hetkellä:</h4>
-            <figure>
-                <img src="${jsonData.currentConditions.iconURL}" alt="weather icon">
-            </figure>
-         <p>Asteita: ${jsonData.currentConditions.temp.c} °</p>
-         
          <h4>Sää huomenna:</h4>     
             <figure>
                 <img src=" ${jsonData.next_days[1].iconURL}" alt="weather icon">
