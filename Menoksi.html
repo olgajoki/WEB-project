@@ -10,6 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="kuvat/pullo.png" type="image/png" sizes="20x20">
+    <!-- Load Leaflet from CDN -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+            integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+            crossOrigin=""/>
 
 
 </head>
@@ -18,9 +25,16 @@
         <h1>MENOKSI</h1>
     </header>
 
+    <div class="topnav">
+        <a class="active" href="Menoksi.html">Menoksi</a>
+        <a href="HTML/mitamissamilloin.html">MITÄ, MISSÄ MILLOIN?</a>
+        <a href="HTML/sivun_tekijat.html">Sivun tekijät</a>
+        <a href="HTML/lisatietoa.html">Taustatyö</a>
+    </div>
+
         <main>
             <section>
-                <p>VIDEO TÄHÄN</p>
+                <p>VIDEO TULOILLAAN TÄHÄN</p>
 
 
 
@@ -36,75 +50,48 @@
                 </p>
             </section>
             <section>
-                <p>kuvat 1,2,3</p>
                 <figure>
+                    <img src="kuvat/kuva1.png" alt="Opiskelijatapahtuma" style="width:333px;height:464px;">
                     <figcaption>
                     </figcaption>
                 </figure>
-                <br>
                 <figure>
+                    <img src="kuvat/kuva2.png" alt="Opiskelijatapahtuma" style="width:333px;height:464px;">
                     <figcaption>
                     </figcaption>
                 </figure>
-                <br>
-                <figure>
-                    <figcaption>
-                    </figcaption>
-                </figure>
-                <br>
-            </section>
-            <section>
-                <h2>Miten sovellus toimii?</h2>
-                <p>Sivustolle tultuasi pääset näkemään teaserin opiskelijoille tarkoitetusta juomapelistä. Lisäksi saat etkoilun avuksi kartan, josta löydät
-                    pääkaupunkiseudulta erilaisia tapahtumia. Lopullisesta sovelluksesta näet tulevien ja meneillä olevien opiskelijatapahtumien sijainnit.
-                    Lisäksi pystyt itse lisäämään tapahtumia kartalle.
-                </p>
 
-                <p>kartta</p>
-
-                <p>tekijöiden kuvat</p>
-                <figure>
-                    <figcaption>
-                    </figcaption>
-                </figure>
             </section>
+
         </main>
-    <!-- aside siirtyy isolla ruudulla oikealle puolelle. Jos asiden pitää mainin ulkopuolella ja ennen API-sectionia, aside-boksi ei kasva API:n haun myötä. -->
+    <aside>
+        <h3>Miten sovellus toimii?</h3>
+        <p>Sivustolle tultuasi pääset näkemään teaserin opiskelijoille tarkoitetusta juomapelistä. Lisäksi saat etkoilun avuksi kartan, josta pääset
+            katsastamaan reitin haluamaasi tapahtumaan.
+            Lopullisesta sovelluksesta näet tulevien ja meneillä olevien opiskelijatapahtumien sijainnit.
+            Lisäksi pystyt itse lisäämään tapahtumia kartalle.
+        </p>
+    </aside>
+    <!-- Skriptit karttaa varten -->
 
-        <aside>
-                <h2>Lisätietoa</h2>
-                <ul>
-                    <li><a id = "linkki" href="lisatietoa.html">Projektin suunnittelu ja videon taustatyö</a></li>
-                </ul>
-            <h3>Säätilanne paikkakunnan mukaan</h3>
+    <script
+            src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossOrigin=""
+    ></script>
 
-            <input id="hakutekstiWeather" type="text">
+    <!-- Load Esri Leaflet from CDN -->
+    <script src="https://unpkg.com/esri-leaflet@3.0.4/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@3.0.0/dist/esri-leaflet-vector.js"></script>
 
-            <button id="hakunappiWeather">Hae</button>
+    <!-- Load ArcGIS REST JS from CDN -->
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@4.0.0/dist/bundled/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-routing@4.0.0/dist/bundled/routing.umd.js"></script>
 
-            <div id="APIhakuWeather">
-
-            </div>
-        </aside>
-
-
-        <section id="API">
-            <br>
-            <h2>MITÄ, MISSÄ, MILLOIN?</h2>
-
-            <p>Jos kaipaat hieman rauhallisempaa tekemistä, kirjoita hakukenttään Helsingin lähialue, niin saat Menoksi-ehdotuksia!</p>
-            <input id="hakuteksti" type="text">
-
-            <button id="hakunappi">Hae</button>
-
-            <div id="APIhaku">
-
-            </div>
-            <br />
-        </section>
+    <!-- JS-tiedosto -->
+    <script src="JS/Menoksi.js"></script>
 
 
-    <script src="Menoksi.js"></script>
 
 
 </body>

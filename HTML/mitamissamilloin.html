@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>MITÄ, MISSÄ, MILLOIN?</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../MenoksiStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="../kuvat/pullo.png" type="image/png" sizes="20x20">
+
+</head>
+<body id="flex-container">
+<header>
+    <h1>MENOKSI</h1>
+</header>
+
+<div class="topnav">
+    <a class="active" href="../Menoksi.html">Menoksi</a>
+    <a href="mitamissamilloin.html">MITÄ, MISSÄ MILLOIN?</a>
+    <a href="sivun_tekijat.html">Sivun tekijät</a>
+    <a href="lisatietoa.html">Taustatyö</a>
+</div>
+<main>
+<section id="API">
+    <br>
+    <h2>MITÄ, MISSÄ, MILLOIN</h2>
+
+    <p>Jos kaipaat hieman rauhallisempaa tekemistä, kirjoita hakukenttään Helsingin lähialue, niin saat Menoksi-ehdotuksia!</p>
+    <input id="hakuteksti" type="text">
+
+    <button id="hakunappi">Hae</button>
+
+    <div id="APIhaku">
+
+    </div>
+    <br />
+</section>
+
+<section id="mapPosition">
+    <div id="map"></div>
+
+
+</section>
+</main>
+<!-- aside siirtyy isolla ruudulla oikealle puolelle. Jos asiden pitää mainin ulkopuolella ja ennen API-sectionia, aside-boksi ei kasva API:n haun myötä. -->
+<aside>
+    <h3>Säätilanne paikkakunnan mukaan</h3>
+
+    <input id="hakutekstiWeather" type="text">
+
+    <button id="hakunappiWeather">Hae</button>
+
+    <div id="APIhakuWeather">
+
+    </div>
+</aside>
+
+<script src="../JS/APIt.js"></script>
+
+
+</body>
+</html>
