@@ -11,27 +11,6 @@ for(let i = 1; i <= juomapelinTehtavat.length; i++){
 }
 
 
-// Projektin taustatyölinkin taustavärin muuttaminen
-// Olga Jokinen 3.5.2022
-
-let lisatietoaLinkki = document.getElementById('linkki');
-
-//muutetaan tausta transparentiksi, kun hiiri on linkin päällä.
-function changeColor(){
-
-  lisatietoaLinkki.style.backgroundColor = 'rgba(0%, 0%, 0%, 0.1)';
-}
-
-//palautetaan tausta entiselleen, kun hiiri poistuu linkin päältä.
-function removeColor(){
-  lisatietoaLinkki.style.backgroundColor = 'revert';
-}
-
-//tapahtuman käsittelijät hiiren ollessa linkin päällä ja poistuessa sen päältä
-lisatietoaLinkki.addEventListener('mouseover', changeColor);
-lisatietoaLinkki.addEventListener('mouseout', removeColor);
-
-
 // Kartta
 const apiKey = "AAPKf8c49bd5910c45f2b0e3cfa504ec9557PWvltKsnoVO6Biz4wH88YOyySeuQG7d8oyoTj9qt9RfKvWnrHPQxe8pk8mdl-aGj";
 

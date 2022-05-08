@@ -1,3 +1,41 @@
+// Hakukenttien taustavärin muuttaminen
+// Olga Jokinen 3.5.2022
+
+let lisatietoaHakukentta = document.getElementById('hakuteksti');
+let lisatietoaHakukenttaWeather = document.getElementById('hakutekstiWeather');
+
+//muutetaan taustan väriä, kun hiiri on haun päällä.
+function changeColor(){
+
+    lisatietoaHakukentta.style.backgroundColor = 'rgba(0%, 0%, 0%, 0.1)';
+
+}
+
+function changeColorWeather(){
+
+    lisatietoaHakukenttaWeather.style.backgroundColor = 'rgba(0%, 0%, 0%, 0.1)';
+
+}
+
+//palautetaan tausta entiselleen, kun hiiri poistuu haun päältä.
+function removeColor(){
+    lisatietoaHakukentta.style.backgroundColor = 'revert';
+
+}
+
+function removeColorWeather(){
+    lisatietoaHakukenttaWeather.style.backgroundColor = 'revert';
+
+}
+
+//tapahtuman käsittelijät hiiren ollessa haun päällä ja poistuessa sen päältä
+lisatietoaHakukentta.addEventListener('mouseover', changeColor);
+lisatietoaHakukentta.addEventListener('mouseout', removeColor);
+
+lisatietoaHakukenttaWeather.addEventListener('mouseover', changeColorWeather);
+lisatietoaHakukenttaWeather.addEventListener('mouseout', removeColorWeather);
+
+
 
 //API, jolla haetaan Helsoingin lähialueiden tapahtumia ja tulostetaan ne erilliseen scroll bar boksiin.
 // Olga Jokinen 4.5.2022
