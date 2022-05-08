@@ -72,7 +72,6 @@ aside {
 /*Scrollbar APIhaun tuloksille, joka piilossa, kunnes haku on suoritettu.*/
 #APIhaku{
     visibility: hidden;
-
     background: rgb(210,230,250);
     width:100%;
     height:400px;
@@ -81,6 +80,7 @@ aside {
     overflow:scroll;
     font-family: 'Roboto', sans-serif;
     line-height: 150%;
+    font-size: 90%;
 
 }
 

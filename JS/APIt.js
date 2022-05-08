@@ -174,14 +174,14 @@ function naytaVastausWeather(proxynData) {
                 <img src="${jsonData.currentConditions.iconURL}" alt="weather icon">
             </figure>
          <p>Asteita: ${jsonData.currentConditions.temp.c} °</p>
-         <br>
+         
          <h4>Sää huomenna:</h4>     
             <figure>
                 <img src=" ${jsonData.next_days[1].iconURL}" alt="weather icon">
             </figure>
          <p>Asteita: ${jsonData.next_days[1].min_temp.c}° - ${jsonData.next_days[1].max_temp.c}°</p>
 
-         <br>
+         
          <h4>Sää ylihuomenna:</h4>       
             <figure>
                 <img src="${jsonData.next_days[2].iconURL}" alt="weather icon">          
