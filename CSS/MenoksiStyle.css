@@ -5,7 +5,7 @@
     color: RGB(0,0,0);
     font-family: 'Roboto', sans-serif;
     line-height: 150%;
-    background-color: aliceblue;
+    background-color: rgb(251, 222, 116);
 }
 
 body{
@@ -17,7 +17,6 @@ body{
 header {
     width: 100%;
     text-align: center;
-    background: rgb(228 168 168);
     font-family: 'Roboto', sans-serif;
     height: 50%;
 }
@@ -28,7 +27,7 @@ main {
 
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #333;
+    background: RGB(76, 26, 87);
     overflow: hidden;
     width: 100%;
 }
@@ -36,7 +35,7 @@ main {
 /* Style the links inside the navigation bar */
 .topnav a {
     float: left;
-    color: #f2f2f2;
+    color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -45,20 +44,20 @@ main {
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    background-color: #ddd;
+    background-color: RGB(209, 208, 220);
     color: black;
 }
 
 /* Add a color to the active/current link */
 .topnav a.active {
-    background-color: #04AA6D;
+    background-color: RGB(76, 26, 87);
     color: white;
 }
 
 
 aside {
     width: 100%;
-    background: rgb(210,230,250);
+    background: rgb(209, 208, 220);
     color: rgb(0,0,0);
     text-align: center;
     font-style: italic;
@@ -72,7 +71,7 @@ aside {
 /*Scrollbar APIhaun tuloksille, joka piilossa, kunnes haku on suoritettu.*/
 #APIhaku{
     visibility: hidden;
-    background: rgb(210,230,250);
+    background: rgb(209, 208, 220);
     width:100%;
     height:400px;
     FLOAT: left;
@@ -83,6 +82,7 @@ aside {
     font-size: 90%;
 
 }
+
 
 @media only screen and (min-width: 768px) {
     /*aside siirtyy isolla ruudulla oikealle puolelle*/
@@ -103,6 +103,7 @@ aside {
     #APIhaku{
         width: 90%;
     }
+
 
 
 
