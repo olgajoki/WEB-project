@@ -44,3 +44,14 @@ h3{
         width: 100%;
     }
 }
+/* lisätty fontti*/
+h1, h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+body {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+a {
+    color: rgb(228 168 168);
+}
